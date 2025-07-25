@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/main_backgroud_color"
+    tools:context=".MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BD Jewellero App"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:layout_margin="20dp"
+            android:background="@drawable/left_shade"
+            android:layout_marginBottom="10dp"
+
+            />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/main_img1"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            >
+
+            <TextView
+                android:id="@+id/main_textView1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/frame_design"
+                android:drawableTop="@drawable/contertor"
+                android:text="Live Price"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:backgroundTint="@color/halka_color"
+                />
+
+            <TextView
+                android:id="@+id/main_textView2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/frame_design"
+                android:drawableTop="@drawable/design_extra3"
+                android:gravity="center"
+                android:text="Designs"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/halka_color"
+                />
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            >
+
+            <TextView
+                android:id="@+id/main_textView3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/frame_design"
+                android:drawableTop="@drawable/calculator_image"
+                android:text="Price Calculator"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:backgroundTint="@color/halka_color"
+                />
+
+            <TextView
+                android:id="@+id/main_textView4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/frame_design"
+                android:text="Save Data"
+                android:drawableTop="@drawable/amni1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                android:backgroundTint="@color/halka_color"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Calculator">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BD Jewellero App"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/left_shade"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/halka_color"
+        android:background="@drawable/textview_border"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate Price"
+            android:gravity="center"
+            android:background="@drawable/textview_border"
+            android:backgroundTint="@color/light_color"
+            android:textSize="24sp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            />
+
+        <EditText
+            android:id="@+id/edText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Current Gold Price per vori"
+            android:background="@drawable/textview_border"
+            android:inputType="number"
+            android:layout_marginTop="10dp"
+            android:textSize="22sp"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/edtext2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Making Changer Per Vori"
+            android:background="@drawable/textview_border"
+            android:inputType="number"
+            android:layout_marginTop="10dp"
+            android:textSize="22sp"
+            android:padding="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                >
+                <EditText
+                    android:id="@+id/edText3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Koto Vori \n likhun"
+                    android:gravity="center"
+                    android:background="@drawable/textview_border"
+                    android:layout_marginTop="10dp"
+                    android:inputType="number"
+                    />
+
+                <EditText
+                    android:id="@+id/edText5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Koto Roti \n likhun"
+                    android:gravity="center"
+                    android:background="@drawable/textview_border"
+                    android:inputType="number"
+                    android:layout_marginTop="10dp"
+                    />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                >
+                <EditText
+                    android:id="@+id/edText4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="koto ana \n likhun"
+                    android:gravity="center"
+                    android:background="@drawable/textview_border"
+                    android:inputType="number"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/edText6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Koto Point \n likhun"
+                    android:inputType="number"
+                    android:background="@drawable/textview_border"
+                    android:layout_marginTop="10dp"
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/beguni_color"
+            android:text="Click Here"
+            android:textSize="24sp"
+           android:textStyle="bold"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="Price will show here"
+        android:background="@drawable/textview_border"
+        android:backgroundTint="@color/halka_color"
+        android:layout_margin="20dp"
+/>
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/light"
+        android:padding="10dp"
+        android:text="Clean \nData"
+        android:textSize="16sp"
+        android:layout_marginTop="25dp"
+        android:textStyle="bold" />
+
+
+
+</LinearLayout>

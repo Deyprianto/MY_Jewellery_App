@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Form Section -->
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Jewelry Name"
+        android:background="@android:drawable/edit_text"
+        android:padding="8dp" />
+
+    <EditText
+        android:id="@+id/editWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Weight (grams)"
+        android:background="@android:drawable/edit_text"
+        android:padding="8dp"
+        android:layout_below="@id/editName"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/editPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Price (৳)"
+        android:background="@android:drawable/edit_text"
+        android:padding="8dp"
+        android:layout_below="@id/editWeight"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:id="@+id/editCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Category (Ring, Necklace etc.)"
+        android:background="@android:drawable/edit_text"
+        android:padding="8dp"
+        android:layout_below="@id/editPrice"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Jewelry"
+        android:layout_below="@id/editCategory"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true" />
+
+    <!-- RecyclerView Section -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewJewelry"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnSave"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>

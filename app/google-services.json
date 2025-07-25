@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "450475594164",
+    "project_id": "bd-jewellero",
+    "storage_bucket": "bd-jewellero.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:450475594164:android:5cd9aed1aae6c02fb1a2e1",
+        "android_client_info": {
+          "package_name": "com.example.bdjewellero"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIPjQH2afP5O8u76SoT2BlZfkq1YhRTno"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
