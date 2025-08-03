@@ -23,24 +23,57 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_11
         targetCompatibility JavaVersion.VERSION_11
     }
+
+    // ✅ Add this to fix META-INF/LICENSE issues
+    packagingOptions {
+        resources {
+            excludes += [
+                    "META-INF/LICENSE.md",
+                    "META-INF/LICENSE-notice.md",
+                    "META-INF/DEPENDENCIES",
+                    "META-INF/LICENSE",
+                    "META-INF/NOTICE"
+            ]
+        }
+    }
+
+    // ✅ Enable JUnit 5 Platform
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+        }
+    }
 }
 
 dependencies {
-
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
     implementation libs.constraintlayout
     implementation libs.gridlayout
     implementation libs.firebase.database
-    testImplementation libs.junit
+
+    // JUnit 4 dependency for legacy tests
+    testImplementation 'junit:junit:4.13.2'
+
+    // JUnit 5 API and engine for new tests
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+
+    // JUnit Vintage engine to run JUnit 4 tests on JUnit 5 platform
+    testImplementation 'org.junit.vintage:junit-vintage-engine:5.10.0'
+
+    // Android instrumentation test dependencies (no changes needed)
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
 
+    // Other libraries
     implementation 'com.github.bumptech.glide:glide:4.16.0'
     implementation 'org.jsoup:jsoup:1.15.3'
 }
+

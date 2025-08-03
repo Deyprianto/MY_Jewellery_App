@@ -41,17 +41,17 @@ public class Calculator extends AppCompatActivity {
 
 
         button2.setOnClickListener(new View.OnClickListener() {
-                                       @Override
+            @Override
             public void onClick(View v) {
-                  editText1.setText("");
-                  editText2.setText("");
-                  editText3.setText("");
-                  editText4.setText("");
-                  editText5.setText("");
-                  editText6.setText("");
-                  textView.setText("Price will show here");
-         }
-             });
+                editText1.setText("");
+                editText2.setText("");
+                editText3.setText("");
+                editText4.setText("");
+                editText5.setText("");
+                editText6.setText("");
+                textView.setText("Price will show here");
+            }
+        });
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +62,7 @@ public class Calculator extends AppCompatActivity {
     }
 
 
-    private void calculateTotalPrice() {
+   /* private void calculateTotalPrice() {
         try {
             int edValue1 = parseInput(editText1);
             int edValue2 = parseInput(editText2);
@@ -83,7 +83,28 @@ public class Calculator extends AppCompatActivity {
         } catch (Exception e) {
             textView.setText("Error: Please enter valid numbers.");
         }
+    } */
+
+    private void calculateTotalPrice() {
+        try {
+            int edValue1 = parseInput(editText1);
+            int edValue2 = parseInput(editText2);
+            int edValue3 = parseInput(editText3);
+            int edValue4 = parseInput(editText4);
+            int edValue5 = parseInput(editText5);
+            int edValue6 = parseInput(editText6);
+
+            // Use the helper class for calculation
+            double totalPrice = PriceCalculator.calculateTotalPrice(
+                    edValue1, edValue2, edValue3, edValue4, edValue5, edValue6
+            );
+
+            textView.setText(String.format("Total Price: %.2f", totalPrice));
+        } catch (Exception e) {
+            textView.setText("Error: Please enter valid numbers.");
+        }
     }
+
 
     private int parseInput(EditText editText) {
         String text = editText.getText().toString().trim();
